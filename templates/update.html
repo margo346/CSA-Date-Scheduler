@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Profile
+{% endblock %}
+
+{% block main %}
+    <h1>Update Profile</h1>
+    <form style="margin: 50px;" action="/updateprofile" method="post">
+        <!-- Create a new template for profile updates. Users are allowed to change their class year and concentration -->
+
+        <div class="mb-3">
+            <span class="searchlabel">
+                <header style="margin: 15px;">Update Class Year: </header>
+            </span>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="newclassyear" placeholder="Year" type="number" min="2022" max="2026">
+        </div>
+
+        <div class="searchfield">
+            <span class="searchlabel">
+                <header class="mb-3">Update Concentration: </header>
+            </span>
+            <span class="searchinput">
+                <select name="newconcentration">
+                    <option value="No Change"> No Change</option>
+                    <option value="African & African American Studies">African & African American Studies</option>
+                    <option value="Anthropology">Anthropology</option>
+                    <option value="Applied Mathematics">Applied Mathematics</option>
+                    <option value="Art, Film, and Visual Studies">Art, Film, and Visual Studies</option>
+                    <option value="Astrophysics">Astrophysics</option>
+                    <option value="Biomedical Engineering">Biomedical Engineering</option>
+                    <option value="Chemical & Physical Biology">Chemical & Physical Biology</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Chemistry & Physics">Chemistry & Physics</option>
+                    <option value="Classics">Classics</option>
+                    <option value="Comp Sci & Healthcare Innovation">Comp Sci & Healthcare Innovation</option>
+                    <option value="Comparative Literature">Comparative Literature</option>
+                    <option value="Comparative Study of Religion">Comparative Study of Religion</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Earth & Planetary Sciences">Earth & Planetary Sciences</option>
+                    <option value="East Asian Studies">East Asian Studies</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Engineering Sciences (AB)">Engineering Sciences (AB)</option>
+                    <option value="Engineering Sciences (SB)">Engineering Sciences (SB)</option>
+                    <option value="English">English</option>
+                    <option value="Environmental Science & Public Policy">Environmental Science & Public Policy</option>
+                    <option value="Environmental Science and Engineering">Environmental Science and Engineering</option>
+                    <option value="Folklore & Mythology">Folklore & Mythology</option>
+                    <option value="Geography and Identity">Geography and Identity</option>
+                    <option value="Germanic Languages & Lits">Germanic Languages & Lits</option>
+                    <option value="Government">Government</option>
+                    <option value="History">History</option>
+                    <option value="History & Literature">History & Literature</option>
+                    <option value="History & Science">History & Science</option>
+                    <option value="History of Art & Architecture">History of Art & Architecture</option>
+                    <option value="Human Developmental & Regen Biology">Human Developmental & Regenerative Biology</option>
+                    <option value="Human Evolutionary Biology">Human Evolutionary Biology</option>
+                    <option value="Integrative Biology">Integrative Biology</option>
+                    <option value="Linguistics">Linguistics</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Molecular & Cellular Biology">Molecular & Cellular Biology</option>
+                    <option value="Music">Music</option>
+                    <option value="Near Eastern Languages & Civilizations">Near Eastern Languages & Civilizations</option>
+                    <option value="Neuroscience">Neuroscience</option>
+                    <option value="Philosophy">Philosophy</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Psychology">Psychology</option>
+                    <option value="Rationality">Rationality</option>
+                    <option value="Romance Languages & Literature">Romance Languages & Literature</option>
+                    <option value="Slavic Literatures & Cultures">Slavic Literatures & Cultures</option>
+                    <option value="Social Studies">Social Studies</option>
+                    <option value="Sociology">Sociology</option>
+                    <option value="South Asian Studies">South Asian Studies</option>
+                    <option value="Special Concentration">Special Concentration</option>
+                    <option value="Statistics">Statistics</option>
+                    <option value="Theater, Dance & Media">Theater, Dance & Media</option>
+                    <option value="Undeclared">Undeclared</option>
+                    <option value="Visual & Environmental Studies">Visual & Environmental Studies</option>
+                    <option value="Women, Gender & Sexuality">Women, Gender & Sexuality</option>
+                </select>
+            </span>
+        </div>
+
+        <div class="searchfield">
+            <span class="searchlabel">
+                <header class="mb-3">Update House:  </header>
+            </span>
+            <span class="searchinput">
+                <select xmlns:xspdoc="http://apache.org/cocoon/XSPDoc/v1" xmlns:esql="http://apache.org/cocoon/SQL/v2" xmlns:xsp-request="http://apache.org/xsp/request/2.0" name="house">
+                    <option value="No Change">No Change</option>
+                    <option value="Adams">Adams</option>
+                    <option value="Cabot">Cabot</option>
+                    <option value="Currier">Currier</option>
+                    <option value="Dudley">Dudley</option>
+                    <option value="Dunster">Dunster</option>
+                    <option value="Eliot">Eliot</option>
+                    <option value="Kirkland">Kirkland</option>
+                    <option value="Leverett">Leverett</option>
+                    <option value="Lowell">Lowell</option>
+                    <option value="Mather">Mather</option>
+                    <option value="Pfoho">Pfoho</option>
+                    <option value="Quincy">Quincy</option>
+                    <option value="Winthrop">Winthrop</option>
+                </select>
+            </span>
+        </div>
+        <button style="margin-top:40px;" class="btn btn-primary" type="submit">Save Profile</button>
+    </form>
+{% endblock %}

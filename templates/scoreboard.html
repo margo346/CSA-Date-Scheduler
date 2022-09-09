@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Scoreboard
+{% endblock %}
+
+{% block main %}
+
+<table class="table">
+  <thead>
+  <tr>
+      <th scope="col">Ranking</th>
+      <th scope="col">Name</th>
+      <th scope="col">Grade</th>
+      <th scope="col">Dates Scheduled</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>1</td>
+        <td>{{ firstperson["name"] }}</td>
+        <td>{{ firstperson["classyear"] }}</td>
+        <td>{{ firstperson["num_dates"] }}</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>{{ secondperson["name"] }}</td>
+      <td>{{ secondperson["classyear"] }}</td>
+      <td>{{ secondperson["num_dates"] }}</td>
+  </tr>
+    <tr>
+      <td>3</td>
+      <td>{{ thirdperson["name"] }}</td>
+      <td>{{ thirdperson["classyear"] }}</td>
+      <td>{{ thirdperson["num_dates"] }}</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

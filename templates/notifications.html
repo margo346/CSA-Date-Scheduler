@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Date Scheduler
+{% endblock %}
+
+{% block main %}
+<head>
+    <h1>Notifications</h1>
+    <div style="margin-bottom:40px;"></div>
+</head>
+<body>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date & Time</th>
+            <th scope="col">Location</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for invite in invites %}
+            <tr>
+                <th scope="row">{{ invite["name"] }}</th>
+                <td>{{ invite["date"] }} at {{ invite["time"] }}</td>
+                <td>{{ invite["location"] }}</td>
+                <form action="/notifications" method="post">
+                    <td>
+                        <button name="accept" type="submit" value="accept">Accept👍</button>
+                    </td>
+                    <td>
+                        <button name="defer" type="submit" value="defer">Defer👊</button>
+                    </td>
+                </form>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">Pending Invites</td>
+                <td class="border-0 text-end" colspan="4">{{ total_invites }}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">Total Dates Scheduled</td>
+                <td class="border-0 text-end" w-bold colspan="4">{{ total_dates }}</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+{% endblock %}

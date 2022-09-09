@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Date Scheduler
+{% endblock %}
+
+{% block main %}
+<head>
+    <h1>Date Scheduler</h1>
+    <div>&nbsp;</div>
+</head>
+<body>
+    <form action="/datescheduler" method="post">
+        <div><input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="yourname" placeholder="Your Name" type="text"></div>
+        <div style="margin:20px">---</div>
+        <div>
+            <input autocomplete="off" class="form-control mx-auto w-auto" min="2022-05-03" name="date" type="date" style="margin: 10px">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="time" type="time" style="margin: 10px">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="location" placeholder="Location" type="text" style="margin: 10px">
+        </div>
+        <div style="margin:20px">---</div>
+        <div><input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="friend" placeholder="Friend's Name" type="text"></div>
+        <button style="margin-top:30px;" class="btn btn-primary" type="submit">Propose Date</button>
+    </form>
+</body>
+{% endblock %}

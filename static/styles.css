@@ -1,0 +1,35 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: x-large;
+    font-style: italic;
+    font-family: "Monaco", Garamond, serif;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+div.searchfield
+{
+    margin: 0.5em 0.5em 0.5em 0px;
+}
+
+.button
+{
+    margin: 10px;
+}

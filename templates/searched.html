@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile Found
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Graduation Year</th>
+        <th scope="col">Concentration</th>
+        <th scope="col">House</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for profile in matched_profiles %}
+        <tr>
+            <th scope="row">{{ profile["name"] }}</th>
+            <td>{{ profile["email"] }}</td>
+            <td>{{ profile["classyear"] }}</td>
+            <td>{{ profile["concentration"] }}</td>
+            <td>{{ profile["house"] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
